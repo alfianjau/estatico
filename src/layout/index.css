@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+:root {
+  --main-green: #8ac832;
+  --accent-gray: #222629;
+  --light-gray: #F4F5F7;
+}
+
+a {
+  transition: .3s ease-in;
+}
+
+a:hover {
+  color: #8ac832;
+}
+
+#___gatsby #gatsby-focus-wrapper {
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* min-width: 100vw; */
+}
+
+.layout-container {
+  min-height: 100vh;
+  /* min-width: 100vw; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+@media (max-width:750px) {
+  .layout-container {
+    padding-top: 0 !important;
+  }
+
+}

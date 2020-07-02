@@ -1,0 +1,25 @@
+.blog-feed__aside {
+    position: relative;
+}
+
+.blog-feed__aside:after {
+    content: '';
+    right: 50%;
+    margin-right: -50vw;
+    background-color: #e5e5e5;
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    z-index: -20;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+}
+
+@media (max-width:750px) {
+    .blog-feed__aside:after {
+        margin-left: -50vw;
+        left: 50%;
+    }
+}

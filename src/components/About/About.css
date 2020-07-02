@@ -1,0 +1,110 @@
+.about-container .section.has-images .star-box__item {
+    position: absolute;
+    padding: 1rem;
+    border-width: 2px;
+    left: 0;
+}
+
+.about-container .section.has-images .text-list {
+    padding-left: 5rem;
+    position: relative;
+}
+
+.about-container .section.has-images .section__image--left {
+    height: 100vh;
+}
+
+.about-container .section.has-images .section__image--right {
+    height: 80vh;
+    position: absolute !important;
+    right: 12%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.about-container .composition__head--alt {
+    color: var(--main-green);
+}
+
+.about-container .composition__head--alt:after {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: calc(100% + 1rem);
+    left: inherit;
+}
+
+.about-container .custom-quote__title {
+    color: var(--main-green);
+}
+
+
+.about-container .geometric-text .custom-quote__title {
+    color: var(--accent-gray);
+}
+
+.about-container .custom-quote {
+    background-color: var(--light-gray);
+    position: relative;
+    color: var(--accent-gray);
+    padding: 5rem 0;
+}
+
+.about-container .custom-quote:before {
+    content: '';
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background-color: var(--light-gray);
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    z-index: -1;
+    top: 0;
+}
+
+.about-container .residential__image:before {
+    content: '';
+    z-index: -1;
+    height: calc(90%);
+    top: -60%;
+    left: 100%;
+    width: 75%;
+}
+
+@media (max-width: 750px) {
+
+    /* Mobile custom breakpoint */
+    .about-container .section.has-images .section__image--right {
+        height: 40vh;
+    }
+
+    .about-container .section.has-images .section__image--left {
+        height: 50vh;
+    }
+
+    .about-container .section__image {
+        margin-bottom: 12rem;
+    }
+
+    .about-container .section.has-images .star-box__item {
+        bottom: 100%;
+    }
+
+
+    .about-container .text-list p:before {
+        content: none;
+    }
+
+    .about-container .text-list p {
+        padding-left: 0;
+    }
+
+    .about-container .section.has-images .text-list {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,57 @@
+.footer {
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+  position: relative;
+  overflow-y: hidden;
+  z-index: 10;
+}
+
+footer:after {
+  content: 'KW';
+  font-size: 60em;
+  font-family: 'Oswald';
+  transform: rotate(-15deg);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  opacity: .06;
+  line-height: 17rem;
+  z-index: 10;
+}
+
+.footer__logo path {
+  fill: white;
+}
+
+
+.footer__link {
+  transition: .3s ease;
+}
+
+
+
+.notice-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+  margin-top: 25px;
+}
+
+
+@media screen and (max-width: 750px) {
+  footer:after {
+    display: none;
+  }
+
+  .footer__logo {
+    margin: 0 auto;
+  }
+
+  .notice-container h4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,11 @@
+.navigation a {
+    font-weight: bold;
+}
+
+.light-logo path {
+    fill: white;
+}
+
+.dark-logo path {
+    fill: initial;
+}

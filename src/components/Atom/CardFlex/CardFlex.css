@@ -1,0 +1,27 @@
+.card--flex {
+    border-top: 5px solid var(--main-green);
+}
+
+.card--flex .gatsby-image-wrapper {
+    z-index: -1;
+    height: 24rem;
+    width: auto;
+}
+
+.card--flex .card__info--floating:after {
+    content: '';
+    height: 1px;
+    width: 25%;
+    background-color: var(--main-green);
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.card--flex .card__description p {
+    display: -webkit-box;
+    -webkit-line-clamp: inherit;
+    -webkit-box-orient: inherit;
+}

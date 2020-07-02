@@ -1,0 +1,10 @@
+# setup bridge interactive API
+
+# set this file(rename) into .env.development to consume API test
+
+BASE_URL="https://api.bridgedataoutput.com/api/v2/"
+ACCESS_TOKEN="6baca547742c6f96a6ff71b138424f21"
+datatype="OData/"
+dataset="test/"
+OfficeKey="O_5dba1f95cf17cd5b43eb0255"
+

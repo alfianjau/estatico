@@ -1,0 +1,58 @@
+.quote .composition__head {
+    font-size: 48px;
+}
+
+@media (min-width:40em) {
+    .quote {
+        position: relative;
+    }
+
+    /* .career__image .gatsby-image-wrapper {
+        position: absolute !important;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        display: block;
+        margin-right: -50vw;
+        width: 45vw;
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 36rem;
+    } */
+
+    .quote .composition {
+        position: relative;
+        padding: 0 6rem;
+        /* z-index: 20; */
+        /* display: block; */
+    }
+
+
+}
+
+@media (max-width:750px) {
+    .quote {
+        position: relative;
+    }
+
+    .quote .composition__head {
+        font-size: 28px;
+    }
+
+    .quote .composition {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .quote .composition:before {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        left: -2rem;
+        background: #222629;
+        z-index: -10;
+    }
+
+}

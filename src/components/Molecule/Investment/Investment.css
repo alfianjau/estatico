@@ -1,0 +1,40 @@
+@media (min-width:40em) {
+    .investment {
+        position: relative;
+    }
+
+    .investment__image .gatsby-image-wrapper {
+        position: absolute !important;
+        right: 50%;
+        top: 0;
+        bottom: 0;
+        display: block;
+        margin-right: -50vw;
+        width: 45vw;
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 36rem;
+    }
+
+    .investment .composition {
+        position: relative;
+        padding: 0 6rem;
+        /* z-index: 20; */
+        /* display: block; */
+    }
+
+
+}
+
+@media (max-width:750px) {
+
+
+    .investment__image {
+        width: 80vw !important;
+        position: relative;
+        align-self: flex-end;
+        right: -2em;
+    }
+
+
+}

@@ -1,0 +1,19 @@
+.star-box__item {
+    padding: 2rem;
+    border: 1px solid var(--main-green);
+}
+
+.star-box__dot {
+    position: relative;
+}
+
+.star-box__dot:after {
+    content: '';
+    height: 1px;
+    width: 11.5em;
+    border-bottom: 2px dashed var(--main-green);
+    position: absolute;
+    bottom: .5rem;
+    transform: rotate(16.5deg);
+    transform-origin: left;
+}

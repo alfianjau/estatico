@@ -1,0 +1,15 @@
+.text-list p {
+    position: relative;
+}
+
+.text-list p:before {
+    content: '';
+    height: 1px;
+    width: 1.5rem;
+    background-color: var(--main-green);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+}

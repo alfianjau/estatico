@@ -1,0 +1,145 @@
+@media (min-width: 40em) {
+  .commercial {
+    position: relative;
+  }
+
+  .commercial__image .gatsby-image-wrapper {
+    position: absolute !important;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    display: block;
+    margin-left: -50vw;
+    width: 50vw;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 36rem;
+  }
+
+  .commercial .composition {
+    position: relative;
+    padding: 0 6rem;
+    /* z-index: 20; */
+    /* display: block; */
+  }
+
+  .commercial .composition:before {
+    content: '';
+    background-color: #222629;
+    width: calc(50vw + 6rem);
+    height: calc(100% + 16rem);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -6rem;
+    right: 0;
+    margin: auto;
+    z-index: -10;
+    display: block;
+  }
+
+  .commercial--alternate .composition:before {
+    left: inherit;
+  }
+
+  .commercial--alternate .commercial__image .gatsby-image-wrapper {
+    right: 50%;
+    margin-right: -50vw;
+  }
+
+  .commercial--alternate .commercial__image .gatsby-image-wrapper {
+    margin-right: -50vw;
+    right: 50%;
+    left: inherit;
+    margin-left: inherit;
+    width: 51vw;
+  }
+
+  .commercial--intricate .composition:before {
+    content: none;
+  }
+
+  .commercial--intricate .commercial__image .gatsby-image-wrapper {
+    right: 50%;
+    margin-right: -50vw;
+  }
+
+  .commercial--intricate .commercial__image .gatsby-image-wrapper {
+    margin-right: -50vw;
+    right: 50%;
+    left: inherit;
+    margin-left: inherit;
+    width: 51vw;
+  }
+
+  .commercial--intricate .commercial__intricate-text {
+    position: absolute;
+    z-index: 40;
+    background: repeating-linear-gradient(
+      45deg,
+      #222629,
+      rgba(255, 255, 255, 0.36) 1px,
+      #222629 1px,
+      #222629 8px
+    );
+    width: 50%;
+    top: 69%;
+    right: 3%;
+    margin: auto;
+    height: auto;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 750px) {
+  .commercial__image {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+  }
+
+  .commercial .composition:before {
+    content: '';
+    background-color: #222629;
+    width: 100vw;
+    height: calc(100% + 16rem);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -2rem;
+    /* right: -1rem; */
+    margin: auto;
+    z-index: -10;
+    display: block;
+  }
+
+  .commercial--intricate {
+    position: relative;
+  }
+
+  .commercial--intricate .composition {
+    margin-top: 6rem;
+  }
+  .commercial--intricate .composition:before {
+    content: none;
+  }
+  .commercial--intricate .commercial__intricate-text {
+    position: absolute;
+    z-index: 40;
+    background: repeating-linear-gradient(
+      45deg,
+      #222629,
+      rgba(255, 255, 255, 0.36) 1px,
+      #222629 1px,
+      #222629 8px
+    );
+    width: 100%;
+    top: 27%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: auto;
+    align-self: flex-end;
+  }
+}

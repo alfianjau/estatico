@@ -1,0 +1,27 @@
+.leading-text__heading {
+    position: relative;
+}
+
+.leading-text__heading:after {
+    content: "";
+    position: absolute;
+    right: calc(100% + 1rem);
+    width: 1px;
+    height: 90%;
+    background: var(--main-green);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@media (min-width: 1100px) {
+
+    /* Desktop custom breakpoint */
+    .homepage .commercial .composition {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+        transform: translateX(12rem);
+        z-index: -1;
+    }
+}

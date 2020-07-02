@@ -1,0 +1,187 @@
+.about-opportunity .custom-quote__title {
+  margin-bottom: 0;
+}
+
+.about-opportunity .custom-quote__alttitle {
+  color: var(--main-green);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.about-opportunity .__content {
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.about-opportunity .star-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 15rem; */
+  height: 250px;
+}
+
+.about-opportunity .geometric-box:nth-child(even) {
+  margin-top: 100px;
+}
+
+.about-opportunity .star-box__item {
+  position: relative;
+}
+
+.about-opportunity .star-box__item:after {
+  content: '';
+  position: absolute;
+  height: 120px;
+  width: 1px;
+  border-right: 2px dashed var(--main-green);
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: auto;
+}
+
+.about-opportunity .geometric-box:nth-child(even) .star-box__dot:before {
+  content: '';
+  height: 1px;
+  width: 11.5em;
+  border-bottom: 2px dashed var(--main-green);
+  position: absolute;
+  bottom: 2px;
+  transform: rotate(16.5deg);
+  transform-origin: right;
+  right: 0;
+}
+
+.about-opportunity .geometric-box:nth-child(even) .star-box__dot:after {
+  content: '';
+  height: 1px;
+  width: 11.5em;
+  border-bottom: 2px dashed var(--main-green);
+  position: absolute;
+  bottom: 2px;
+  transform: rotate(-16.5deg);
+  transform-origin: left;
+  left: 0;
+}
+
+.about-opportunity .geometric-box:nth-child(3) .star-box__dot:before {
+  content: '';
+  height: 1px;
+  width: 11.5em;
+  border-bottom: 2px dashed var(--main-green);
+  position: absolute;
+  bottom: 0.5em;
+  transform: rotate(-17deg);
+  transform-origin: right;
+  right: 0;
+}
+
+.about-opportunity .geometric-box:nth-child(3) .star-box__dot:after {
+  content: none;
+}
+
+.about-opportunity .geometric-box:last-child .star-box__dot:after {
+  content: none;
+}
+
+.about-opportunity .geometric-box:last-child .star-box__dot:before {
+  width: 20em;
+  transform: rotate(19deg);
+}
+
+.about-opportunity__geometry {
+  width: 100%;
+  justify-content: space-around;
+}
+
+@media (max-width: 750px) {
+  /* Mobile custom breakpoint */
+  .star-box__dot:before {
+    content: none !important;
+  }
+
+  .star-box__dot:after {
+    content: none !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1300px) {
+  /* Desktop custom breakpoint */
+  .star-box__dot:after {
+    transform: rotate(21deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(3) .star-box__dot:before {
+    width: 11em;
+    transform: rotate(-21.5deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(even) .star-box__dot:after {
+    transform: rotate(-21.5deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(even) .star-box__dot:before {
+    transform: rotate(21.5deg);
+  }
+
+  .about-opportunity .geometric-box:last-child .star-box__dot:before {
+    transform: rotate(25deg);
+    width: 15em;
+  }
+}
+
+@media (min-width: 1301px) and (max-width: 1450px) {
+  /* laptop medium breakpoint */
+  .star-box__dot:after {
+    transform: rotate(18.5deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(3) .star-box__dot:before {
+    width: 11em;
+    transform: rotate(-18.5deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(even) .star-box__dot:after {
+    transform: rotate(-18.5deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(even) .star-box__dot:before {
+    transform: rotate(18.5deg);
+  }
+
+  .about-opportunity .geometric-box:last-child .star-box__dot:before {
+    transform: rotate(21deg);
+    width: 18em;
+  }
+}
+
+@media (min-width: 1900px) {
+  /* 4k breakpoint */
+  .star-box__dot:after {
+    transform: rotate(14deg);
+    width: 16em;
+  }
+
+  .about-opportunity .geometric-box:nth-child(3) .star-box__dot:before {
+    width: 15em;
+    transform: rotate(-14deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(even) .star-box__dot:after {
+    width: 15em;
+    transform: rotate(-13deg);
+  }
+
+  .about-opportunity .geometric-box:nth-child(even) .star-box__dot:before {
+    width: 15em;
+    transform: rotate(13deg);
+  }
+
+  .about-opportunity .geometric-box:last-child .star-box__dot:before {
+    transform: rotate(16deg);
+    width: 24em;
+  }
+}

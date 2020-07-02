@@ -1,0 +1,57 @@
+.offices {
+    margin-top: 8rem;
+}
+
+.offices .__content {
+    width: 100vw;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    min-height: 200px;
+    left: 50%;
+    margin-left: -50vw;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.office-information {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 2em;
+    color: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.office-information h2 {
+    position: relative;
+}
+
+.office-information h2:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: white;
+    top: calc(100% + 1rem);
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+@media (max-width: 750px) {
+
+    /* Mobile custom breakpoint */
+    .offices {
+        margin-top: -6rem;
+    }
+
+    .offices .__content {
+        flex-direction: column;
+    }
+}

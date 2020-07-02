@@ -1,0 +1,46 @@
+.section__image {
+    position: relative;
+}
+
+.section.has-images .gatsby-image-wrapper {
+    display: inline-block;
+}
+
+.section__image--left {
+    width: 25vw;
+    left: 0;
+    height: 135%;
+    margin-left: -10vw;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute !important;
+}
+
+.section__image--right {
+    width: 40%;
+    margin-right: -10vw;
+}
+
+@media (max-width: 750px) {
+
+    /* Mobile custom breakpoint */
+    .section.has-images {
+        margin-top: 6rem;
+        margin-bottom: 9rem;
+    }
+
+    .section__image {
+        margin-bottom: 6rem;
+    }
+
+    .section__image--left {
+        margin-left: -8vw;
+        width: 45vw;
+    }
+
+    .section__image--right {
+        margin-right: -30vw;
+    }
+}

@@ -1,0 +1,41 @@
+.commercial__properties {
+    position: relative;
+}
+
+.commercial__properties:before {
+    width: 100vw;
+    content: '';
+    height: 100%;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    position: absolute;
+    z-index: -10;
+    display: block;
+    background-color: #222629;
+    top: 0;
+}
+
+.custom-quote__title--center:after {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: calc(100% + 1rem);
+    width: 5rem;
+}
+
+.counter__number {
+    position: relative;
+}
+
+.counter__number:before {
+    content: '';
+    width: 1px;
+    height: 8rem;
+    background: var(--main-green);
+    position: absolute;
+    top: 0;
+    left: -1rem;
+}
