@@ -1,0 +1,15 @@
+.team-card {
+    transition: .3s ease-in background;
+    cursor: pointer;
+}
+
+.team-card:hover {
+    background: var(--darker-gray);
+}
+
+.card__map-pin {
+    background: var(--main-green);
+    padding: 1rem;
+    width: min-content;
+    border-radius: 100%;
+}
