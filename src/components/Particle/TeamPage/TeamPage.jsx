@@ -1,10 +1,8 @@
 import React from 'react'
-import { Flex, Box, Text, PseudoBox } from '@chakra-ui/core'
-import { FiMail, FiPhone } from 'react-icons/fi'
-import { BsArrowRight } from 'react-icons/bs'
+import { Flex, Box } from '@chakra-ui/core'
 import Hero from '../../Molecule/Hero/Hero'
 import IntricateBox from '../../Atom/IntricateBox/IntricateBox'
-import TeamCard from './TeamCard'
+import DImage from '../../Atom/DImage/DImage'
 import './TeamPage.css'
 
 class TeamPage extends React.Component {
@@ -26,205 +24,22 @@ class TeamPage extends React.Component {
         >
           <Hero
             isAlternate
-            image="team-page"
-            imageAlt="team-page"
+            image="our-team"
+            imageAlt="our-team"
             title="Our Team"
           >
             Our Team
           </Hero>
-          <IntricateBox title="Our Team" className="teams">
-            <TeamCard imageSrc="about-person" imageAlt="about-person">
-              <Box
-                className="card__info--floating"
-                mt="-4rem"
-                mx="auto"
-                left="0"
-                right="0"
-                zIndex="docked"
-                p="1rem"
-                width="80%"
-                textAlign="center"
-                fontSize={{ sm: '2xl', md: '4xl' }}
-                fontWeight="normal"
-                lineHeight="tight"
-                background="white"
-                position="relative"
-                color="accent.500"
-              >
-                <Text as="h3" mb="1rem" fontSize="3xl" fontWeight="bold">
-                  Artur Baduev
-                </Text>
-                <Text fontSize="md" mb="2rem">
-                  Renting Agent
-                </Text>
-                <Box fontSize="md">
-                  <p>
-                    <Box
-                      as="span"
-                      verticalAlign="text-top"
-                      display="inline-block"
-                      mr={4}
-                      mb={4}
-                    >
-                      <FiPhone />
-                    </Box>
-                    +44 (0)855 534 3230
-                  </p>
-                </Box>
-                <Box fontSize="md">
-                  <p>
-                    <Box
-                      as="span"
-                      verticalAlign="text-top"
-                      display="inline-block"
-                      mr={4}
-                      mb={8}
-                    >
-                      <FiMail />
-                    </Box>
-                    <span fontSize="md">testemail@gmail.com</span>
-                  </p>
-                </Box>
-                <PseudoBox
-                  as="button"
-                  fontSize="lg"
-                  display="flex"
-                  alignItems="center"
-                  m="auto"
-                >
-                  <Text fontWeight="bold">View profile</Text>
-                  <BsArrowRight className="composition__link--arrow" />
-                </PseudoBox>
-              </Box>
-            </TeamCard>
-            <TeamCard imageSrc="about-person" imageAlt="about-person">
-              <Box
-                className="card__info--floating"
-                mt="-4rem"
-                mx="auto"
-                left="0"
-                right="0"
-                zIndex="docked"
-                p="1rem"
-                width="80%"
-                textAlign="center"
-                fontSize={{ sm: '2xl', md: '4xl' }}
-                fontWeight="normal"
-                lineHeight="tight"
-                background="white"
-                position="relative"
-                color="accent.500"
-              >
-                <Text as="h3" mb="1rem" fontSize="3xl" fontWeight="bold">
-                  Artur Baduev
-                </Text>
-                <Text fontSize="md" mb="2rem">
-                  Renting Agent
-                </Text>
-                <Box fontSize="md">
-                  <p>
-                    <Box
-                      as="span"
-                      verticalAlign="text-top"
-                      display="inline-block"
-                      mr={4}
-                      mb={4}
-                    >
-                      <FiPhone />
-                    </Box>
-                    +44 (0)855 534 3230
-                  </p>
-                </Box>
-                <Box fontSize="md">
-                  <p>
-                    <Box
-                      as="span"
-                      verticalAlign="text-top"
-                      display="inline-block"
-                      mr={4}
-                      mb={8}
-                    >
-                      <FiMail />
-                    </Box>
-                    <span fontSize="md">testemail@gmail.com</span>
-                  </p>
-                </Box>
-                <PseudoBox
-                  as="button"
-                  fontSize="lg"
-                  display="flex"
-                  alignItems="center"
-                  m="auto"
-                >
-                  <Text fontWeight="bold">View profile</Text>
-                  <BsArrowRight className="composition__link--arrow" />
-                </PseudoBox>
-              </Box>
-            </TeamCard>
-            <TeamCard imageSrc="about-person" imageAlt="about-person">
-              <Box
-                className="card__info--floating"
-                mt="-4rem"
-                mx="auto"
-                left="0"
-                right="0"
-                zIndex="docked"
-                p="1rem"
-                width="80%"
-                textAlign="center"
-                fontSize={{ sm: '2xl', md: '4xl' }}
-                fontWeight="normal"
-                lineHeight="tight"
-                background="white"
-                position="relative"
-                color="accent.500"
-              >
-                <Text as="h3" mb="1rem" fontSize="3xl" fontWeight="bold">
-                  Artur Baduev
-                </Text>
-                <Text fontSize="md" mb="2rem">
-                  Renting Agent
-                </Text>
-                <Box fontSize="md">
-                  <p>
-                    <Box
-                      as="span"
-                      verticalAlign="text-top"
-                      display="inline-block"
-                      mr={4}
-                      mb={4}
-                    >
-                      <FiPhone />
-                    </Box>
-                    +44 (0)855 534 3230
-                  </p>
-                </Box>
-                <Box fontSize="md">
-                  <p>
-                    <Box
-                      as="span"
-                      verticalAlign="text-top"
-                      display="inline-block"
-                      mr={4}
-                      mb={8}
-                    >
-                      <FiMail />
-                    </Box>
-                    <span fontSize="md">testemail@gmail.com</span>
-                  </p>
-                </Box>
-                <PseudoBox
-                  as="button"
-                  fontSize="lg"
-                  display="flex"
-                  alignItems="center"
-                  m="auto"
-                >
-                  <Text fontWeight="bold">View profile</Text>
-                  <BsArrowRight className="composition__link--arrow" />
-                </PseudoBox>
-              </Box>
-            </TeamCard>
+          <IntricateBox title="[Placeholder]" className="offices">
+            <Box width={{ sm: '100%', md: '33.3%' }}>
+              <DImage alt="offices" filename="offices.jpg" />
+            </Box>
+            <Box width={{ sm: '100%', md: '33.3%' }}>
+              <DImage alt="offices" filename="offices.jpg" />
+            </Box>
+            <Box width={{ sm: '100%', md: '33.3%' }}>
+              <DImage alt="offices" filename="offices.jpg" />
+            </Box>
           </IntricateBox>
         </Flex>
       </Box>
