@@ -27,7 +27,6 @@ class AgentSecctionListing extends React.Component {
               fontSize={{ sm: '2xl', md: '4xl' }}
               fontWeight="normal"
               lineHeight="tight"
-              background="white"
               position="relative"
               color="accent.500"
             >
@@ -99,7 +98,6 @@ class AgentSecctionListing extends React.Component {
               fontSize={{ sm: '2xl', md: '4xl' }}
               fontWeight="normal"
               lineHeight="tight"
-              background="white"
               position="relative"
               color="accent.500"
             >
@@ -171,7 +169,6 @@ class AgentSecctionListing extends React.Component {
               fontSize={{ sm: '2xl', md: '4xl' }}
               fontWeight="normal"
               lineHeight="tight"
-              background="white"
               position="relative"
               color="accent.500"
             >

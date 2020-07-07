@@ -4,6 +4,8 @@ import { FiMail, FiPhone } from 'react-icons/fi'
 import { BsArrowRight } from 'react-icons/bs'
 import Hero from '../../Molecule/Hero/Hero'
 import AgentSectionListing from './AgentSectionListing'
+import AgentSectionInfo from './AgentSectionInfo'
+import AgentSectionDetail from './AgentSectionDetail'
 import BlogPreview from '../../Molecule/BlogPreview/BlogPreview'
 import './AgentPage.css'
 
@@ -32,6 +34,8 @@ class AgentPage extends React.Component {
           >
             Our Team
           </Hero>
+          <AgentSectionInfo />
+          <AgentSectionDetail />
           <AgentSectionListing />
           <BlogPreview />
         </Flex>

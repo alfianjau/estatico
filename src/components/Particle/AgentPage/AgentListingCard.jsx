@@ -34,7 +34,6 @@ function ListingCard(props) {
           fontSize={{ sm: '2xl', md: '4xl' }}
           fontWeight="bold"
           lineHeight="tight"
-          background="white"
           position="relative"
         >
           <Text>{props.floatingText}</Text>
