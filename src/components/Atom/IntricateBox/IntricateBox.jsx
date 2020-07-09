@@ -2,7 +2,7 @@ import { Flex, Heading } from '@chakra-ui/core'
 import React, { useState } from 'react'
 import './IntricateBox.css'
 
-function IntricateBox(props) {
+function IntricateBox({ ...props }) {
   const [isDark] = useState(props.isDark)
   const [hasAlt] = useState(props.hasAlt)
   return (
@@ -13,6 +13,7 @@ function IntricateBox(props) {
       my={props.my}
       py={props.py}
       backgroundColor={props.backgroundColor}
+      {...props}
     >
       <Heading
         as="h2"

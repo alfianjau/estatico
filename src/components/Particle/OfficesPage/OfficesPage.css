@@ -2,6 +2,11 @@
     margin-top: 8rem;
 }
 
+.offices-page .hero-wrapper {
+    padding-bottom: 0;
+    margin-bottom: -2rem;
+}
+
 .offices .__content {
     width: 100vw;
     -ms-flex-direction: row;
@@ -53,5 +58,9 @@
 
     .offices .__content {
         flex-direction: column;
+    }
+
+    .offices-page .gatsby-image-wrapper>div {
+        padding-bottom: 56% !important;
     }
 }
