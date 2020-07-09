@@ -14,7 +14,6 @@ function TeamCard(props) {
     <Box
       className="card team-card"
       overflow="hidden"
-      mx={{ md: '1rem' }}
       my={6}
       width={props.width}
     >

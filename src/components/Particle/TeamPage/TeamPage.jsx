@@ -138,7 +138,7 @@ const TeamPage = () => {
               </SortButton>
             </ButtonGroup>
 
-            <Flex flexWrap="wrap">
+            <Flex flexWrap="wrap" mx="-1rem">
               {sorted.map((agent) => {
                 return (
                   <Box

@@ -14,6 +14,16 @@
     border-radius: 100%;
 }
 
+.agent-container .commercial .composition {
+    padding: 0;
+}
+
+.agent-container .commercial--alternate .composition:before {
+    left: -10rem;
+    width: 80vw;
+    height: calc(100% + 22rem);
+}
+
 .agent-accordion {
     border-color: var(--main-green);
 }
