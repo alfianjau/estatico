@@ -41,7 +41,7 @@ const TeamPage = () => {
       allBridgeAgents {
         edges {
           node {
-            bundle {
+            value {
               MemberKeyNumeric
               MemberFullName
               MemberMobilePhone
@@ -56,7 +56,7 @@ const TeamPage = () => {
     }
   `)
 
-  const agentEdges = data.allBridgeAgents.edges[0].node.bundle
+  const agentEdges = data.allBridgeAgents.edges[0].node.value
   const [sorted, setSorted] = useState([...agentEdges])
 
   useEffect(() => {

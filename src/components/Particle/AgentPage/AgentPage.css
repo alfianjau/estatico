@@ -21,7 +21,7 @@
 .agent-container .commercial--alternate .composition:before {
     left: -10rem;
     width: 80vw;
-    height: calc(100% + 22rem);
+    height: calc(100% + 12rem);
 }
 
 .agent-accordion {
@@ -30,4 +30,17 @@
 
 .agent-accordion [data-accordion-item] {
     border-color: var(--main-green);
+}
+
+@media (max-width: 750px) {
+
+    /* Mobile custom breakpoint */
+    .agent-container .commercial--alternate .composition:before {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        height: calc(100% + 6rem);
+    }
 }

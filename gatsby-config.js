@@ -90,7 +90,7 @@ module.exports = {
         typePrefix: 'bridge__',
 
         // The url, this should be the endpoint you are attempting to pull data from
-        url: `${process.env.BASE_URL}${process.env.dataset}agents`,
+        url: `${process.env.BASE_URL}${process.env.datatype}${process.env.dataset}Member`,
 
         method: 'get',
 

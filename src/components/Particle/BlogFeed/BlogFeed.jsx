@@ -8,7 +8,7 @@ import Btn from '../../Atom/Btn/Btn'
 
 import './BlogFeed.css'
 
-function TextComposition() {
+function BlogFeed() {
   //   const [title] = useState(props.title)
 
   return (
@@ -129,4 +129,4 @@ function TextComposition() {
   )
 }
 
-export default TextComposition
+export default BlogFeed

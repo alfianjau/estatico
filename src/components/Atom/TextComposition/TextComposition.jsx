@@ -1,4 +1,4 @@
-import { Flex, PseudoBox, Heading, Text } from '@chakra-ui/core'
+import { Flex, PseudoBox, Heading, Text, Box } from '@chakra-ui/core'
 import React, { useState } from 'react'
 import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'gatsby'
@@ -49,7 +49,7 @@ function TextComposition(props) {
           {title}
         </Heading>
       )}
-      <Text
+      <Box
         fontWeight={`${altHeading ? 'Bold' : 'normal'}`}
         fontSize={{ sm: 'md', md: '3xl' }}
         color={`${isDark ? 'white' : 'accent.500'}`}
@@ -58,7 +58,7 @@ function TextComposition(props) {
         mt={{ sm: 8 }}
       >
         {props.children}
-      </Text>
+      </Box>
       {addText ? (
         <Text
           fontSize={{ sm: 'md', md: 'lg' }}

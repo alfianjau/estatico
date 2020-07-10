@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Flex,
   Box,
-  Text,
   Heading,
   PseudoBox,
   Accordion,
@@ -12,16 +11,17 @@ import {
   AccordionIcon,
 } from '@chakra-ui/core'
 import { Link } from 'gatsby'
-import { FiMail, FiPhone, FiMapPin } from 'react-icons/fi'
-import { BsArrowRight } from 'react-icons/bs'
-import Commercial from '../../Molecule/Commercial/Commercial'
 
 class AgentSectionDetail extends React.Component {
   render() {
     // const postList = this.getPostList()
     return (
-      <Flex direction={{ sm: 'column', md: 'row' }} my="3rem" flexWrap="wrap">
-        <Box width={{ sm: '100%', md: '50%' }} minHeight="18rem">
+      <Flex
+        direction={{ sm: 'column', md: 'row' }}
+        my={{ sm: '5rem', md: '3rem' }}
+        flexWrap="wrap"
+      >
+        <Box width={{ sm: '100%', md: '50%' }} minHeight={{ md: '18rem' }}>
           <Heading
             as="h2"
             fontSize={{ sm: '3xl', md: '5xl' }}

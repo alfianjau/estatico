@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react'
-import { Flex, Box, IconButton } from '@chakra-ui/core'
+import { Flex, Box, IconButton, Text } from '@chakra-ui/core'
 import {
   FiTwitter,
   FiFacebook,
@@ -17,7 +17,7 @@ function AgentSectionInfo() {
       direction="column"
       justifyContent={{ md: 'center' }}
       height={{ md: '57em' }}
-      my={8}
+      my={{ sm: 12, md: 24 }}
       width="100%"
     >
       <Flex
@@ -37,36 +37,39 @@ function AgentSectionInfo() {
           title="James Garber"
           btnTitle="More info"
           btnLink="/blog/"
-          addText="Brookline"
         >
-          Commercial Real Estate Specialist
-          <Box>
-            <p>
-              <Box
-                as="span"
-                verticalAlign="text-top"
-                display="inline-block"
-                mr={4}
-                mb={4}
-              >
-                <FiPhone />
-              </Box>
-              +44 (0)855 534 3230
-            </p>
+          <Text fontSize="3xl" my={8} fontWeight="normal">
+            Commercial Real Estate Specialist
+          </Text>
+          <Text fontSize="4xl" mb={8}>
+            Brookline
+          </Text>
+          <Text fontSize="2xl" my={8} fontWeight="normal">
+            191 Grove Street Brookline, MA 02467
+          </Text>
+          <Box fontWeight="normal">
+            <Box
+              as="span"
+              verticalAlign="text-top"
+              display="inline-block"
+              mr={4}
+              mb={4}
+            >
+              <FiPhone />
+            </Box>
+            +44 (0)855 534 3230
           </Box>
-          <Box>
-            <p>
-              <Box
-                as="span"
-                verticalAlign="text-top"
-                display="inline-block"
-                mr={4}
-                mb={8}
-              >
-                <FiMail />
-              </Box>
-              <span>testemail@gmail.com</span>
-            </p>
+          <Box fontWeight="normal">
+            <Box
+              as="span"
+              verticalAlign="text-top"
+              display="inline-block"
+              mr={4}
+              mb={8}
+            >
+              <FiMail />
+            </Box>
+            <span>testemail@gmail.com</span>
           </Box>
           <Flex justifyContent={{ sm: 'center', md: 'flex-start' }}>
             <IconButton

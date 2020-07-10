@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 import Layout from '../layout'
 import SEO from '../components/SEO/SEO'
-import Team from '../components/Particle/TeamPage/TeamPage'
+import PostPage from '../components/Particle/PostPage/PostPage'
 import config from '../../data/SiteConfig'
 
 class singlePostPage extends Component {
@@ -10,9 +10,9 @@ class singlePostPage extends Component {
     return (
       <Layout location={this.props.location}>
         <div className="teams-container">
-          <Helmet title={`Our Teams | ${config.siteTitle}`} />
+          <Helmet title={`post | ${config.siteTitle}`} />
           <SEO />
-          <Team />
+          <PostPage />
         </div>
       </Layout>
     )
