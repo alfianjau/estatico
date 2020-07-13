@@ -1,0 +1,34 @@
+.post-header {
+  position: relative;
+}
+
+.post-header:before {
+  content: '';
+  width: 100vw;
+  height: calc(100% + 1px);
+  position: absolute;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: 50%;
+  right: 50%;
+  background-color: var(--accent-gray);
+  z-index: -1;
+  top: -1px;
+}
+
+.post-container .hero-wrapper {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.post-content {
+  min-height: 400px;
+}
+
+@media (max-width: 750px) {
+  /* Mobile custom breakpoint */
+  .post-container .hero-wrapper {
+    padding-left: inherit;
+    padding-right: inherit;
+  }
+}

@@ -9,7 +9,7 @@ class singlePostPage extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <div className="teams-container">
+        <div className="post-container">
           <Helmet title={`post | ${config.siteTitle}`} />
           <SEO />
           <PostPage />
