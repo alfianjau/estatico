@@ -10,8 +10,9 @@ import './listing.css'
 class Listing extends React.Component {
   renderPaging() {
     const { currentPageNum, pageCount } = this.props.pageContext
-    const prevPage = currentPageNum - 1 === 1 ? '/' : `/${currentPageNum - 1}/`
-    const nextPage = `/${currentPageNum + 1}/`
+    const prevPage =
+      currentPageNum - 1 === 1 ? '/feed' : `/feed/${currentPageNum - 1}/`
+    const nextPage = `/feed/${currentPageNum + 1}/`
     const isFirstPage = currentPageNum === 1
     const isLastPage = currentPageNum === pageCount
 
@@ -23,7 +24,7 @@ class Listing extends React.Component {
           return (
             <Link
               key={`listing-page-${pageNum}`}
-              to={pageNum === 1 ? '/' : `/${pageNum}/`}
+              to={pageNum === 1 ? '/feed' : `/feed/${pageNum}/`}
             >
               {pageNum}
             </Link>
@@ -55,7 +56,7 @@ class Listing extends React.Component {
 export default Listing
 
 /* eslint no-undef: "off" */
-/* export const listingQuery = graphql`
+export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { fields: [fields___date], order: DESC }
@@ -80,4 +81,4 @@ export default Listing
       }
     }
   }
-` */
+`

@@ -71,7 +71,7 @@ function CardBox(props) {
         </Box>
         <PseudoBox className="card__button" bg="primary.500">
           <span>
-            <Link className="tag__link" to={`/tags/${tagLink}`}>
+            <Link className="tag__link" to={`${tagLink}`}>
               Read more
             </Link>
           </span>
