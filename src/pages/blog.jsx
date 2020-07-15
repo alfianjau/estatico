@@ -1,7 +1,7 @@
 import { Flex, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/core'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from '../layout'
 // import BlogPage from '../templates/blogListing'
 import BlogFeed from '../components/Particle/BlogFeed/BlogFeed'
@@ -10,7 +10,31 @@ import config from '../../data/SiteConfig'
 import './blog.css'
 
 function Blog(props) {
-  // const postEdges = props.data.allMarkdownRemark.edges
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+        edges {
+          node {
+            fields {
+              slug
+              date
+            }
+            excerpt
+            timeToRead
+            frontmatter {
+              title
+              tags
+              cover
+              date
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const postEdges = data.allMarkdownRemark.edges
+
   return (
     <Layout location={props.location}>
       <Flex px={{ sm: '1rem', md: '9rem' }}>
@@ -21,10 +45,22 @@ function Blog(props) {
             <TabList
               color="white"
               className="blog-tab__tablist"
+              flexWrap="wrap"
               flexDirection={{ sm: 'column', md: 'row' }}
               py={{ sm: 10, md: 32 }}
             >
-              <Tab
+              {postEdges.map((post) => (
+                <Tab
+                  key={post.node.frontmatter.title}
+                  fontWeight="bold"
+                  fontSize={{ sm: 'lg', md: '4xl' }}
+                  px={8}
+                  _selected={{ color: 'primary.500' }}
+                >
+                  {post.node.frontmatter.tags}
+                </Tab>
+              ))}
+              {/* <Tab
                 fontWeight="bold"
                 fontSize={{ sm: 'lg', md: '4xl' }}
                 px={8}
@@ -47,7 +83,7 @@ function Blog(props) {
                 _selected={{ color: 'primary.500' }}
               >
                 Case Studies
-              </Tab>
+              </Tab> */}
             </TabList>
             <TabPanels>
               <TabPanel>
@@ -70,25 +106,3 @@ function Blog(props) {
 export default Blog
 
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query BlogQuery {
-    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
-      edges {
-        node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            tags
-            cover
-            date
-          }
-        }
-      }
-    }
-  }
-`

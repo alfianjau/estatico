@@ -9,13 +9,14 @@ export default class CategoryTemplate extends React.Component {
   render() {
     const { category } = this.props.pageContext
     const postEdges = this.props.data.allMarkdownRemark.edges
+    const pageContext = this.props.pageContext
     return (
       <Layout location={this.props.location}>
         <div className="category-container">
           <Helmet
             title={`Posts in category "${category}" | ${config.siteTitle}`}
           />
-          <PostListing postEdges={postEdges} />
+          <PostListing postEdges={postEdges} pageContext={pageContext} />
         </div>
       </Layout>
     )

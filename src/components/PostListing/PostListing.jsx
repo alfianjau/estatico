@@ -23,8 +23,36 @@ class PostListing extends React.Component {
     return postList
   }
 
+  renderPaging() {
+    const { currentPageNum, pageCount } = this.props.pageContext
+    const prevPage =
+      currentPageNum - 1 === 1 ? '/feed' : `/feed/${currentPageNum - 1}/`
+    const nextPage = `/feed/${currentPageNum + 1}/`
+    const isFirstPage = currentPageNum === 1
+    const isLastPage = currentPageNum === pageCount
+
+    return (
+      <div className="paging-container">
+        {!isFirstPage && <Link to={prevPage}>Previous</Link>}
+        {[...Array(pageCount)].map((_val, index) => {
+          const pageNum = index + 1
+          return (
+            <Link
+              key={`listing-page-${pageNum}`}
+              to={pageNum === 1 ? '/feed' : `/feed/${pageNum}/`}
+            >
+              {pageNum}
+            </Link>
+          )
+        })}
+        {!isLastPage && <Link to={nextPage}>Next</Link>}
+      </div>
+    )
+  }
+
   render() {
     const postList = this.getPostList()
+    console.log(this.props.pageContext)
     return (
       <Flex
         className="blog-feed"
@@ -39,16 +67,37 @@ class PostListing extends React.Component {
           pr={{ sm: 'inherit', md: 12 }}
           width={{ sm: '100%', md: 2 / 3 }}
         >
-          {/* Your post list here. */
-          postList.map((post) => (
-            <Box key={post.title} width={{ sm: '100%', md: '50%' }}>
-              <CardBox tagLink={post.path} m={0} cardDesc={post.title}>
-                <Box className="card__image">
-                  <DImage alt="hunters-race" filename="nastuh-abootalebi.jpg" />
-                </Box>
-              </CardBox>
-            </Box>
-          ))}
+          {postList.map((post) => {
+            return this.props.postList / 3 === 0 ? (
+              <Box key={post.title} width={{ sm: '100%', md: '100%' }}>
+                <CardBox
+                  isFeatured
+                  tagLink={post.path}
+                  m={0}
+                  cardDesc={post.title}
+                >
+                  <Box className="card__image">
+                    <DImage
+                      alt="hunters-race"
+                      filename="nastuh-abootalebi.jpg"
+                    />
+                  </Box>
+                </CardBox>
+              </Box>
+            ) : (
+              <Box key={post.title} width={{ sm: '100%', md: '50%' }}>
+                <CardBox tagLink={post.path} m={0} cardDesc={post.title}>
+                  <Box className="card__image">
+                    <DImage
+                      alt="hunters-race"
+                      filename="nastuh-abootalebi.jpg"
+                    />
+                  </Box>
+                </CardBox>
+              </Box>
+            )
+          })}
+          {this.renderPaging()}
         </Flex>
         <Flex
           className="blog-feed__aside"

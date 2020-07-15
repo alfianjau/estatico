@@ -37,16 +37,16 @@ class Listing extends React.Component {
 
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges
-
+    const pageContext = this.props.pageContext
     return (
       <Layout location={this.props.location}>
         <div className="listing-container">
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
-            <PostListing postEdges={postEdges} />
+            <PostListing postEdges={postEdges} pageContext={pageContext} />
           </div>
-          {this.renderPaging()}
+          {/* {this.renderPaging()} */}
         </div>
       </Layout>
     )
