@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import moment from 'moment'
 import { Flex, Box } from '@chakra-ui/core'
+import config from '../../../data/SiteConfig'
 import DImage from '../Atom/DImage/DImage'
 import CardBox from '../Atom/CardBox/CardBox'
 import BlogFeedWidget from '../Molecule/BlogFeedWidget/BlogFeedWidget'
@@ -52,7 +54,6 @@ class PostListing extends React.Component {
 
   render() {
     const postList = this.getPostList()
-    console.log(this.props.pageContext)
     return (
       <Flex
         className="blog-feed"
@@ -67,14 +68,16 @@ class PostListing extends React.Component {
           pr={{ sm: 'inherit', md: 12 }}
           width={{ sm: '100%', md: 2 / 3 }}
         >
-          {postList.map((post) => {
-            return this.props.postList / 3 === 0 ? (
+          {postList.map((post, index) => {
+            return index % 3 === 2 ? (
               <Box key={post.title} width={{ sm: '100%', md: '100%' }}>
                 <CardBox
                   isFeatured
                   tagLink={post.path}
                   m={0}
                   cardDesc={post.title}
+                  hasDate={moment(post.date).format(config.dateFromFormat)}
+                  hasTag={[...post.tags]}
                 >
                   <Box className="card__image">
                     <DImage
@@ -86,7 +89,13 @@ class PostListing extends React.Component {
               </Box>
             ) : (
               <Box key={post.title} width={{ sm: '100%', md: '50%' }}>
-                <CardBox tagLink={post.path} m={0} cardDesc={post.title}>
+                <CardBox
+                  tagLink={post.path}
+                  m={0}
+                  cardDesc={post.title}
+                  hasDate={moment(post.date).format(config.dateFromFormat)}
+                  hasTag={post.tags}
+                >
                   <Box className="card__image">
                     <DImage
                       alt="hunters-race"
@@ -108,7 +117,13 @@ class PostListing extends React.Component {
         >
           {postList.map((post) => (
             <Box key={post.title} width="100%">
-              <CardBox isNoImage tagLink={post.path} cardDesc={post.title}>
+              <CardBox
+                isNoImage
+                tagLink={post.path}
+                cardDesc={post.title}
+                hasDate={moment(post.date).format(config.dateFromFormat)}
+                hasTag={post.tags}
+              >
                 {post.title}
               </CardBox>
             </Box>

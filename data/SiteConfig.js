@@ -11,7 +11,7 @@ const config = {
   siteFBAppID: '1825356251115265', // FB Application ID for using app insights
   googleAnalyticsID: 'UA-47311644-5', // GA tracking ID.
   disqusShortname: '', // Disqus shortname.
-  dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
+  dateFromFormat: 'DD MMMM YYYY', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY', // Date format for display.
   postsPerPage: 5, // Amount of posts displayed per listing page.
   userName: 'KW Crosstown', // Username to display in the author segment.

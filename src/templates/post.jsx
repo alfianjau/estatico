@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../layout'
 import UserInfo from '../components/UserInfo/UserInfo'
+import PostPage from '../components/Particle/PostPage/PostPage'
 import PostTags from '../components/PostTags/PostTags'
 import SocialLinks from '../components/SocialLinks/SocialLinks'
 import SEO from '../components/SEO/SEO'
@@ -28,12 +29,13 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
+            <PostPage postNode={postNode} />
+            {/* <h1>{post.title}</h1>
+            <div dangerouslySetInnerHTML={{ __html: postNode.html }} /> */}
+            {/* <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
-            </div>
+            </div> */}
             <UserInfo config={config} />
           </div>
         </div>

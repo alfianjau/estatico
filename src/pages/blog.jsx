@@ -13,6 +13,9 @@ function Blog(props) {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+        group(field: frontmatter___category) {
+          tag: fieldValue
+        }
         edges {
           node {
             fields {
@@ -22,6 +25,7 @@ function Blog(props) {
             excerpt
             timeToRead
             frontmatter {
+              category
               title
               tags
               cover
@@ -33,8 +37,8 @@ function Blog(props) {
     }
   `)
 
-  const postEdges = data.allMarkdownRemark.edges
-
+  // const postEdges = data.allMarkdownRemark.edges
+  const groupTag = data.allMarkdownRemark.group
   return (
     <Layout location={props.location}>
       <Flex px={{ sm: '1rem', md: '9rem' }}>
@@ -49,15 +53,15 @@ function Blog(props) {
               flexDirection={{ sm: 'column', md: 'row' }}
               py={{ sm: 10, md: 32 }}
             >
-              {postEdges.map((post) => (
+              {groupTag.map((tag, i) => (
                 <Tab
-                  key={post.node.frontmatter.title}
+                  key={i}
                   fontWeight="bold"
                   fontSize={{ sm: 'lg', md: '4xl' }}
                   px={8}
                   _selected={{ color: 'primary.500' }}
                 >
-                  {post.node.frontmatter.tags}
+                  {tag.tag}
                 </Tab>
               ))}
               {/* <Tab

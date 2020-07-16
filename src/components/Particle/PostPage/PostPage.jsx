@@ -9,6 +9,8 @@ import './PostPage.css'
 class PostPage extends React.Component {
   render() {
     // const postList = this.getPostList()
+    const { postNode } = this.props
+
     return (
       <Flex
         className="hero-wrapper"
@@ -35,8 +37,11 @@ class PostPage extends React.Component {
 
         <Box>
           <Flex direction={{ sm: 'column', md: 'row' }}>
-            <Box width={3 / 4} pr={4}>
-              <Box className="post-content">Post Content</Box>
+            <Box width={2 / 3} pr={4}>
+              <Box
+                className="post-content"
+                dangerouslySetInnerHTML={{ __html: postNode.html }}
+              />
               <Box className="post-footer">
                 <Divider />
                 <Flex justifyContent="space-between">

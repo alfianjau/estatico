@@ -23,6 +23,7 @@
 
 .post-content {
   min-height: 400px;
+  /* width: inherit; */
 }
 
 @media (max-width: 750px) {

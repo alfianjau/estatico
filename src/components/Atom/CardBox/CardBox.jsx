@@ -16,6 +16,8 @@ function CardBox(props) {
   const [isFeatured] = useState(props.isFeatured)
   const [width] = useState(props.width)
   const [isNoImage] = useState(props.isNoImage)
+  const [hasDate] = useState(props.hasDate)
+  const [hasTag] = useState(props.hasTag)
 
   return (
     <Box
@@ -41,16 +43,20 @@ function CardBox(props) {
         p="4"
         {...(isNoImage ? { p: `inherit` } : { p: `1rem` })}
       >
-        <Box d="flex" alignItems="baseline">
-          <Badge
-            variantColor={isNoImage ? 'grey' : 'gray'}
-            {...(isNoImage ? { px: `0` } : { px: `1rem` })}
-            py="2"
-            fontSize="10px"
-          >
-            {tagLink}
-          </Badge>
-        </Box>
+        {hasTag &&
+          hasTag.map((tag) => (
+            <Box key={tag} d="inline-flex" mr={4} alignItems="baseline">
+              <Badge
+                variantColor={isNoImage ? 'grey' : 'gray'}
+                {...(isNoImage ? { px: `0` } : { px: `1rem` })}
+                py="2"
+                fontSize="10px"
+              >
+                {tag}
+              </Badge>
+            </Box>
+          ))}
+
         <Box
           className="card__description"
           my={6}
@@ -66,7 +72,7 @@ function CardBox(props) {
             color={isFeatured ? 'white' : 'accent.500'}
             fontSize="lg"
           >
-            {property.date}
+            {hasDate}
           </Box>
         </Box>
         <PseudoBox className="card__button" bg="primary.500">

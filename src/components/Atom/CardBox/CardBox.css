@@ -1,104 +1,104 @@
 .card {
-    position: relative;
-
+  position: relative;
 }
 
 .card:hover {
-    box-shadow: 3px 6px 12px -12px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 6px 12px -12px rgba(0, 0, 0, 0.6);
+}
+
+.card__info {
+  min-height: 14rem;
 }
 
 .card__description {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .card__description p {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .card__button {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    text-align: center;
-    height: 0;
-    transition: .3s ease-in;
-    cursor: pointer;
-
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  height: 0;
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
 .card__button span {
-    display: inline-table;
-    vertical-align: sub;
+  display: inline-table;
+  vertical-align: sub;
 }
 
 .card__button a {
-    vertical-align: sub;
+  vertical-align: sub;
 }
 
 .card:hover .card__button {
-    height: 2.5rem;
-    border-bottom: 0;
-
+  height: 2.5rem;
+  border-bottom: 0;
 }
 
 .card:hover .card__button a {
-    color: white;
+  color: white;
 }
 
 .card--featured {
-    position: relative;
-    width: auto !important;
-    height: 0;
-    padding-bottom: 56%;
+  position: relative;
+  width: auto !important;
+  height: 0;
+  padding-bottom: 56%;
 }
 
 .card--featured .card__image {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .card--featured .card__info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .card--featured .gatsby-image-wrapper {
-    height: 100%;
+  height: 100%;
 }
 
 .card--noimage .card__button {
-    position: absolute;
-    height: auto;
-    width: auto;
-    text-align: left;
-    background-color: transparent;
-    bottom: 1rem;
+  position: absolute;
+  height: auto;
+  width: auto;
+  text-align: left;
+  background-color: transparent;
+  bottom: 1rem;
 }
 
 .card--noimage .card__info {
-    padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .card--noimage:hover .card__button {
-    height: auto;
-    border-bottom: 5px;
-
+  height: auto;
+  border-bottom: 5px;
 }
 
 .card--noimage:hover .card__button a {
-    color: #456616;
+  color: #456616;
 }
 
 @media (max-width: 750px) {
-    .card--featured {
-        min-height: 24em;
-    }
+  .card--featured {
+    min-height: 24em;
+  }
 }
