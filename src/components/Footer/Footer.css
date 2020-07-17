@@ -3,7 +3,7 @@
   align-content: center;
   padding: 15px;
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   z-index: 10;
 }
 
@@ -15,7 +15,7 @@ footer:after {
   display: block;
   position: absolute;
   bottom: 0;
-  opacity: .06;
+  opacity: 0.06;
   line-height: 17rem;
   z-index: 10;
 }
@@ -24,12 +24,9 @@ footer:after {
   fill: white;
 }
 
-
 .footer__link {
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-
-
 
 .notice-container {
   display: flex;
@@ -39,7 +36,6 @@ footer:after {
   z-index: 20;
   margin-top: 25px;
 }
-
 
 @media screen and (max-width: 750px) {
   footer:after {

@@ -35,7 +35,7 @@ class PostPage extends React.Component {
           </Button>
         </Flex>
 
-        <Box>
+        <Box width="100%">
           <Flex direction={{ sm: 'column', md: 'row' }}>
             <Box width={2 / 3} pr={4}>
               <Box

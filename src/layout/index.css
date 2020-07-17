@@ -16,12 +16,12 @@ body {
 :root {
   --main-green: #8ac832;
   --accent-gray: #222629;
-  --light-gray: #F4F5F7;
+  --light-gray: #f4f5f7;
   --darker-gray: #bfbfbf;
 }
 
 a {
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 a:hover {
@@ -30,7 +30,8 @@ a:hover {
 
 #___gatsby #gatsby-focus-wrapper {
   min-height: 100vh;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  overflow: hidden;
   /* min-width: 100vw; */
 }
 
@@ -40,12 +41,10 @@ a:hover {
   display: flex;
   flex-direction: column;
   position: relative;
-
 }
 
-@media (max-width:750px) {
+@media (max-width: 750px) {
   .layout-container {
     padding-top: 0 !important;
   }
-
 }

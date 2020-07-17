@@ -23,7 +23,128 @@
 
 .post-content {
   min-height: 400px;
+  line-height: 1.65;
   /* width: inherit; */
+}
+
+.post-content .p {
+  margin-bottom: 1.15rem;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.post-content h1 {
+  margin-top: 0;
+  font-size: 2.488em;
+}
+
+.post-content h2 {
+  font-size: 2.074em;
+}
+
+.post-content h3 {
+  font-size: 1.728em;
+}
+
+.post-content h4 {
+  font-size: 1.44em;
+}
+
+.post-content h5 {
+  font-size: 0.75em;
+}
+
+.post-content small,
+.post-content .text_small {
+  font-size: 0.833em;
+}
+
+@screen sm {
+  .post-content {
+    @apply text-base;
+  }
+}
+
+@screen lg {
+  .post-content {
+    @apply text-lg;
+  }
+}
+
+@screen sm {
+  .post-content h1,
+  .post-content h2 {
+    @apply text-2xl;
+  }
+  .post-content h3,
+  .post-content h4,
+  .post-content h5,
+  .post-content h6 {
+    @apply text-xl;
+  }
+}
+
+/* Links */
+.post-content a {
+  @apply text-blue-600;
+}
+.post-content a:hover {
+  @apply underline;
+}
+/* Paragraph */
+.post-content p {
+  @apply mb-4;
+}
+/* Lists */
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+.post-content li > p,
+.post-content li > ul,
+.post-content li > ol {
+  margin-bottom: 0;
+}
+.post-content ol {
+  list-style-type: decimal;
+}
+.post-content ul {
+  list-style-type: disc;
+}
+/* Blockquotes */
+.post-content blockquote {
+  padding: 0.5rem;
+  border-left: 1rem;
+  font-style: italic;
+
+  @apply p-2 mx-6 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
+}
+.post-content blockquote > p {
+  margin-bottom: 0;
+}
+/* Tables */
+.post-content td,
+.post-content th {
+  @apply px-2 py-1 border border-gray-400;
+}
+.post-content tr:nth-child(odd) {
+  @apply bg-gray-100;
+}
+.post-content table {
+  @apply mb-6;
+}
+
+.post-content :not(pre) > code.language-text {
+  white-space: pre-line;
 }
 
 @media (max-width: 750px) {
