@@ -22,8 +22,8 @@ class PostPage extends React.Component {
       >
         <Flex
           className="post-header"
-          pt={{ sm: '0', md: 20 }}
-          pb={{ sm: '4', md: 20 }}
+          pt={{ sm: '0', md: '9rem' }}
+          pb={{ sm: '4', md: '9rem' }}
           px={{ sm: '1rem', md: '9rem' }}
           color="white"
           backgroundColor="accent.500"

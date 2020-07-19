@@ -1,7 +1,7 @@
 import { Flex, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/core'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Layout from '../layout'
 // import BlogPage from '../templates/blogListing'
 import BlogFeed from '../components/Particle/BlogFeed/BlogFeed'
@@ -61,7 +61,7 @@ function Blog(props) {
                   px={8}
                   _selected={{ color: 'primary.500' }}
                 >
-                  {tag.tag}
+                  <Link to={`/categories/${tag.tag}/`}>{tag.tag}</Link>
                 </Tab>
               ))}
               {/* <Tab

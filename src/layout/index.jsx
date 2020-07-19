@@ -21,7 +21,7 @@ export default function MainLayout({ children, location }) {
         <Navigation isDark />
       ) : location.pathname.split('/')[1] === 'commercial' ? (
         <Navigation isDark />
-      ) : location.pathname.split('/')[1] === 'feed' ? (
+      ) : location.pathname.split('/')[1] === 'categories' ? (
         <Navigation isDark />
       ) : (
         <Navigation />

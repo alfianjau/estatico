@@ -28,8 +28,8 @@ class PostListing extends React.Component {
   renderPaging() {
     const { currentPageNum, pageCount } = this.props.pageContext
     const prevPage =
-      currentPageNum - 1 === 1 ? '/feed' : `/feed/${currentPageNum - 1}/`
-    const nextPage = `/feed/${currentPageNum + 1}/`
+      currentPageNum - 1 === 1 ? '/blog' : `/blog/${currentPageNum - 1}/`
+    const nextPage = `/blog/${currentPageNum + 1}/`
     const isFirstPage = currentPageNum === 1
     const isLastPage = currentPageNum === pageCount
 
@@ -41,7 +41,7 @@ class PostListing extends React.Component {
           return (
             <Link
               key={`listing-page-${pageNum}`}
-              to={pageNum === 1 ? '/feed' : `/feed/${pageNum}/`}
+              to={pageNum === 1 ? '/blog' : `/blog/${pageNum}/`}
             >
               {pageNum}
             </Link>
@@ -73,7 +73,7 @@ class PostListing extends React.Component {
               <Box key={post.title} width={{ sm: '100%', md: '100%' }}>
                 <CardBox
                   isFeatured
-                  tagLink={post.path}
+                  tagLink={`/blog/${post.path}`}
                   m={0}
                   cardDesc={post.title}
                   hasDate={moment(post.date).format(config.dateFromFormat)}
@@ -90,7 +90,7 @@ class PostListing extends React.Component {
             ) : (
               <Box key={post.title} width={{ sm: '100%', md: '50%' }}>
                 <CardBox
-                  tagLink={post.path}
+                  tagLink={`/blog/${post.path}`}
                   m={0}
                   cardDesc={post.title}
                   hasDate={moment(post.date).format(config.dateFromFormat)}

@@ -24,6 +24,8 @@
 .post-content {
   min-height: 400px;
   line-height: 1.65;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   /* width: inherit; */
 }
 

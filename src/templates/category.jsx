@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { graphql } from 'gatsby'
+import { Flex, Button } from '@chakra-ui/core'
+import { graphql, Link } from 'gatsby'
 import Layout from '../layout'
 import PostListing from '../components/PostListing/PostListing'
 import config from '../../data/SiteConfig'
@@ -16,6 +17,20 @@ export default class CategoryTemplate extends React.Component {
           <Helmet
             title={`Posts in category "${category}" | ${config.siteTitle}`}
           />
+          <Flex
+            className="post-header"
+            pt={{ sm: '0', md: '9rem' }}
+            pb={{ sm: '4', md: '9rem' }}
+            px={{ sm: '1rem', md: '9rem' }}
+            color="white"
+            backgroundColor="accent.500"
+          >
+            <Button fontSize="3xl" variant="link" width="100%" py={1}>
+              <Link alt="see more" to="/blog">
+                Go to Blog
+              </Link>
+            </Button>
+          </Flex>
           <PostListing postEdges={postEdges} pageContext={pageContext} />
         </div>
       </Layout>
