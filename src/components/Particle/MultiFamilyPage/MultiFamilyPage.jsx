@@ -1,5 +1,6 @@
-import { Flex, Box } from '@chakra-ui/core'
+import { Flex, Box, Heading, PseudoBox } from '@chakra-ui/core'
 import React, { useState } from 'react'
+import { Link } from 'gatsby'
 import Hero from '../../Molecule/Hero/Hero'
 import CustomQuote from '../../Molecule/CustomQuote/CustomQuote'
 import TextList from '../../Atom/TextList/TextList'
@@ -36,11 +37,7 @@ function MultiFamilyPage() {
           subText="We want to be the Coca-Cola of the commercial real estate industry."
           description={`One of the primary drawbacks of the brokerage model is that agents are inherently driven by short-term rewards – getting listings, closing sales, building their personal book of business.
 
-There is often a disconnect between the success drivers for the agent, those of the company, and those of the client.
-
-Therefore, our goal from the outset has been to create a company that incents agents to think like principals.
-
-We want them to have a stake in the success of the company and to see a direct line between the success of their clients, the success of our company, and their long-term financial well-being.`}
+There is often a disconnect between the success drivers for the agent, those of the company, and those of the client.`}
         />
         <SectionWithImages
           my="12rem"
@@ -76,6 +73,54 @@ We want them to have a stake in the success of the company and to see a direct l
           </TextList>
         </SectionWithImages>
         <BlogPreview title="Multifamily News" />
+        <Box
+          width={{ sm: '100%', md: 3 / 4 }}
+          className="leading-text"
+          mb={{ sm: '5rem', md: '10rem' }}
+          mt={{ sm: '5rem', md: '10rem' }}
+          position="relative"
+        >
+          <Heading
+            className="leading-text__heading"
+            as="h2"
+            fontSize={{ sm: '4xl', md: '6xl' }}
+            fontWeight="normal"
+          >
+            People turn the buildings and spaces around us into extraordinary
+            places
+          </Heading>
+          <PseudoBox
+            as="button"
+            display="block"
+            my={16}
+            mx="auto"
+            transition=".3s ease-in"
+            border="1px"
+            px={8}
+            py={4}
+            width={{ sm: 'auto', md: '50%' }}
+            rounded="2px"
+            fontSize="lg"
+            fontWeight="semibold"
+            bg="primary.500"
+            borderColor="#ccd0d5"
+            color="white"
+            _hover={{ bg: 'accent.500' }}
+            _active={{
+              bg: '#dddfe2',
+              transform: 'scale(0.98)',
+              borderColor: '#bec3c9',
+            }}
+            _focus={{
+              boxShadow:
+                '0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)',
+            }}
+          >
+            <Link className="composition__link" fontSize="lg" to="/team">
+              Schedule Consultation
+            </Link>
+          </PseudoBox>
+        </Box>
       </Flex>
     </Box>
   )

@@ -8,9 +8,6 @@ import './CardBox.css'
 
 function CardBox(props) {
   const { children } = props
-  const property = {
-    date: '1 Feb. 2020',
-  }
   const [tagLink] = useState(props.tagLink)
   const [cardDesc] = useState(props.cardDesc)
   const [isFeatured] = useState(props.isFeatured)
