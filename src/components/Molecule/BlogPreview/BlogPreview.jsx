@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Flex, Box, PseudoBox, Heading } from '@chakra-ui/core'
 import { Link } from 'gatsby'
 import { BsArrowRight } from 'react-icons/bs'
@@ -6,7 +6,9 @@ import CardBox from '../../Atom/CardBox/CardBox'
 import DImage from '../../Atom/DImage/DImage'
 import './BlogPreview.css'
 
-function BlogPreview() {
+function BlogPreview(props) {
+  const [title] = useState(props.title)
+
   return (
     <Flex
       className="blog-preview"
@@ -25,7 +27,7 @@ function BlogPreview() {
           mb={{ sm: 4, md: 10 }}
           className="composition__head--alt"
         >
-          Blog - Featured Stories
+          {props.title ? props.title : `Blog - Featured Stories`}
         </Heading>
         <PseudoBox
           as="button"

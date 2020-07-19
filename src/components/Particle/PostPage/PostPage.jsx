@@ -22,8 +22,7 @@ class PostPage extends React.Component {
       >
         <Flex
           className="post-header"
-          pt={{ sm: '0', md: '9rem' }}
-          pb={{ sm: '4', md: '9rem' }}
+          py={{ sm: '6rem', md: '9rem' }}
           px={{ sm: '1rem', md: '9rem' }}
           color="white"
           backgroundColor="accent.500"
@@ -37,7 +36,7 @@ class PostPage extends React.Component {
 
         <Box width="100%">
           <Flex direction={{ sm: 'column', md: 'row' }}>
-            <Box width={2 / 3} pr={4}>
+            <Box width={{ sm: '100%', md: 2 / 3 }} pr={4}>
               <Box
                 className="post-content"
                 dangerouslySetInnerHTML={{ __html: postNode.html }}
