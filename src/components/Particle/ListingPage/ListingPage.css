@@ -1,0 +1,15 @@
+.listings-hero {
+  background-color: var(--normal-gray);
+}
+
+.listings-hero:before {
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--normal-gray);
+  z-index: -1;
+}
+.listings-container .blog-feed__aside:after {
+  bottom: auto;
+}

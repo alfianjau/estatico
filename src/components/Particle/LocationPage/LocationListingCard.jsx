@@ -7,7 +7,7 @@ import { FiMapPin } from 'react-icons/fi'
 import DImage from '../../Atom/DImage/DImage'
 import '../../Atom/CardFlex/CardFlex.css'
 
-function ListingCard(props) {
+function LocationListingCard(props) {
   const [hasFloatingBox] = useState(props.hasFloatingBox)
   const [hasMapPin] = useState(props.hasMapPin)
 
@@ -17,7 +17,7 @@ function ListingCard(props) {
       overflow="hidden"
       mx={{ md: '1rem' }}
       my={6}
-      width={{ sm: '100%', md: 1 / 3 }}
+      width={{ sm: '100%', md: 1 / 2 }}
     >
       <DImage alt={props.imageAlt} filename={props.imageSrc} />
       {hasFloatingBox && (
@@ -59,4 +59,4 @@ function ListingCard(props) {
   )
 }
 
-export default ListingCard
+export default LocationListingCard

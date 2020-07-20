@@ -19,6 +19,7 @@ function Hero(props) {
       height={{ md: 'calc(100vh - 20rem)' }}
       width="100%"
       mb="10rem"
+      {...props}
     >
       <Flex
         className={isDark ? 'hero hero--dark' : 'hero'}

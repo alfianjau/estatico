@@ -23,6 +23,8 @@ export default function MainLayout({ children, location }) {
         <Navigation isDark />
       ) : location.pathname.split('/')[1] === 'categories' ? (
         <Navigation isDark />
+      ) : location.pathname.split('/')[1] === 'listings' ? (
+        <Navigation isGray />
       ) : (
         <Navigation />
       )}

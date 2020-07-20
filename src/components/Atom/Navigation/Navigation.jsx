@@ -21,6 +21,7 @@ const MenuItems = ({ children }) => (
 
 const Header = (props) => {
   const [isDark] = useState(props.isDark)
+  const [isGray] = useState(props.isGray)
   const [show, setShow] = React.useState(false)
   const handleToggle = () => setShow(!show)
 
@@ -35,7 +36,7 @@ const Header = (props) => {
       py={[4, 6]}
       pr={{ sm: '1rem', md: '7rem', lg: '9rem' }}
       pl={4}
-      bg={isDark ? 'accent.500' : 'white'}
+      bg={isDark ? 'accent.500' : isGray ? 'gray.500' : 'white'}
       color={!isDark ? 'accent.500' : 'white'}
       {...props}
     >
