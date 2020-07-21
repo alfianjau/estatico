@@ -15,9 +15,8 @@ function LocationListingCard(props) {
     <Box
       className="card team-card"
       overflow="hidden"
-      mx={{ md: '1rem' }}
       my={6}
-      width={{ sm: '100%', md: 1 / 2 }}
+      width={{ sm: '100%', md: '100%' }}
     >
       <DImage alt={props.imageAlt} filename={props.imageSrc} />
       {hasFloatingBox && (

@@ -1,11 +1,11 @@
 import { Flex, Box, Button, PseudoBox, Divider, Text } from '@chakra-ui/core'
 import React, { useState } from 'react'
-import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'gatsby'
 import Hero from '../../Molecule/Hero/Hero'
 import CardBox from '../../Atom/CardBox/CardBox'
 import BlogFeedWidget from '../../Molecule/BlogFeedWidget/BlogFeedWidget'
 import LocationSectionIntro from './LocationSectionIntro'
+import LocationSectionMap from './LocationSectionMap'
 import LocationSectionListing from './LocationSectionListing'
 import LocationSectionBlog from './LocationSectionBlog'
 
@@ -35,6 +35,7 @@ function LocationPage() {
           Location Page
         </Hero>
         <LocationSectionIntro />
+        <LocationSectionMap />
         <Flex direction={{ sm: 'column', md: 'row' }} width="100%">
           <Box width={{ sm: '100%', md: 2 / 3 }} pr={4}>
             <LocationSectionBlog />

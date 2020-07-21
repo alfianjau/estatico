@@ -9,8 +9,16 @@ class LocationSectionIntro extends React.Component {
     // const postList = this.getPostList()
     return (
       <IntricateBox title="Locations" className="location-info" my="5rem">
-        <Flex justifyContent="Space-between" width="100%">
-          <Flex direction="column" width={1 / 3} px={4}>
+        <Flex
+          justifyContent="Space-between"
+          direction={{ sm: 'column', md: 'row' }}
+          width="100%"
+        >
+          <Flex
+            direction="column"
+            width={{ sm: '100%', md: 1 / 3 }}
+            px={{ sm: 0, md: 4 }}
+          >
             <Text>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
               nulla dolor veritatis rem quae fugiat necessitatibus eveniet,
@@ -48,7 +56,12 @@ class LocationSectionIntro extends React.Component {
               </Link>
             </PseudoBox>
           </Flex>
-          <Flex direction="column" width={1 / 3} px={4}>
+          <Flex
+            direction="column"
+            width={{ sm: '100%', md: 1 / 3 }}
+            px={{ sm: 0, md: 4 }}
+            my={{ sm: 12, md: 0 }}
+          >
             <Text fontSize="3xl" fontWeight="bold">
               Brookline
             </Text>
@@ -56,7 +69,11 @@ class LocationSectionIntro extends React.Component {
               191 Grove Street Brookline, MA 02467
             </Text>
           </Flex>
-          <Flex direction="column" width={1 / 3} px={4}>
+          <Flex
+            direction="column"
+            width={{ sm: '100%', md: 1 / 3 }}
+            px={{ sm: 0, md: 4 }}
+          >
             {' '}
             <Box fontWeight="normal">
               <Box
