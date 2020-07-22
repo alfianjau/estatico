@@ -13,3 +13,67 @@
 .listings-container .blog-feed__aside:after {
   bottom: auto;
 }
+
+.listings__slider {
+  position: relative;
+}
+
+.listings__slider .__content {
+  flex-direction: column;
+  position: relative;
+  height: 53rem;
+  overflow: hidden;
+}
+
+.listings__slider .swiper-container {
+  /* height: 42rem; */
+  right: 0;
+  margin: auto;
+  background-color: white;
+}
+
+.listings__slider .swiper-wrapper {
+  width: 100%;
+}
+
+.listings__slider .carousel__content-item .gatsby-image-wrapper {
+  opacity: 1;
+}
+
+.location-container .blog-feed__aside:after {
+  bottom: auto;
+}
+
+.listings__slider .swiper-button-next {
+  right: 5%;
+}
+
+.listings__slider .swiper-button-prev {
+  right: 9%;
+}
+
+.listings__slider .swiper-gallery {
+  position: initial;
+}
+
+.listings__slider .swiper-gallery .swiper-wrapper {
+  height: 31rem;
+}
+
+.listings__slider .swiper-thumb {
+  cursor: pointer;
+}
+
+.listings__slider .swiper-thumb .swiper-wrapper {
+  margin-left: -20rem;
+}
+
+.listings__slider .swiper-container-horizontal > .swiper-scrollbar {
+  width: 70%;
+  left: 10%;
+  bottom: 1.3rem;
+}
+
+.listings__slider .carousel__thumbnail {
+  width: 25%;
+}

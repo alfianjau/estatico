@@ -2,9 +2,11 @@ import { Flex, Box, PseudoBox } from '@chakra-ui/core'
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Hero from '../../Molecule/Hero/Hero'
-import CardBox from '../../Atom/CardBox/CardBox'
+
 import ListingFooter from './ListingFooter'
+import ListingSectionMap from './ListingSectionMap'
 import ListingSectionOverview from './ListingSectionOverview'
+import ListingSectionSidebar from './ListingSectionSidebar'
 import './ListingPage.css'
 
 function ListingPage() {
@@ -33,6 +35,7 @@ function ListingPage() {
         </Hero>
         <Flex direction={{ sm: 'column', md: 'row' }} width="100%">
           <Box width={{ sm: '100%', md: 2 / 3 }} pr={4}>
+            <ListingSectionMap />
             <ListingSectionOverview />
             <ListingFooter />
           </Box>
@@ -43,33 +46,7 @@ function ListingPage() {
             width={{ sm: '100%', md: 1 / 3 }}
             pl={{ sm: 'inherit', md: 12 }}
           >
-            <Box width="100%">
-              <CardBox
-                isNoImage
-                tagLink="other"
-                cardDesc="Cursus in nec diam, sed tortor fames ut sit. lorem ipsum dolor"
-              >
-                test
-              </CardBox>
-            </Box>
-            <Box width="100%">
-              <CardBox
-                isNoImage
-                tagLink="other"
-                cardDesc="Cursus in nec diam, sed tortor fames ut sit. lorem ipsum dolor"
-              >
-                test
-              </CardBox>
-            </Box>
-            <Box width="100%">
-              <CardBox
-                isNoImage
-                tagLink="other"
-                cardDesc="Cursus in nec diam, sed tortor fames ut sit. lorem ipsum dolor"
-              >
-                test
-              </CardBox>
-            </Box>
+            <ListingSectionSidebar />
             <Box width="100%" px={{ sm: 'inherit', md: 4 }} my={4}>
               <PseudoBox
                 as="button"
