@@ -7,7 +7,10 @@ function ListingFooter() {
   return (
     <Box className="post-footer">
       <Divider />
-      <Flex justifyContent="space-between">
+      <Flex
+        justifyContent="space-between"
+        direction={{ sm: 'column-reverse', md: 'row' }}
+      >
         <PseudoBox
           as="button"
           display="block"
@@ -15,6 +18,7 @@ function ListingFooter() {
           border="1px"
           px={8}
           py={4}
+          my={{ sm: 8 }}
           width={{ sm: 'auto', md: '18rem' }}
           rounded="2px"
           fontSize="lg"
@@ -44,6 +48,7 @@ function ListingFooter() {
           transition=".3s ease-in"
           px={8}
           py={4}
+          my={{ sm: 8 }}
           rounded="2px"
           fontSize="lg"
           fontWeight="semibold"
@@ -54,9 +59,9 @@ function ListingFooter() {
             color="accent.500"
             fontSize="lg"
             display="inline-flex"
-            to="/blog"
+            to="/Listings"
           >
-            Go to blog
+            Go to Listings
             <BsArrowRight className="composition__link--arrow" />
           </Link>
         </PseudoBox>

@@ -6,7 +6,10 @@ import { Link } from 'gatsby'
 function ListingHeader() {
   return (
     <Box className="listing-header" my={8}>
-      <Flex justifyContent="space-between">
+      <Flex
+        justifyContent="space-between"
+        direction={{ sm: 'column', md: 'row' }}
+      >
         <Text fontSize="3xl">Waterloo, ON N2L5T2</Text>
         <PseudoBox
           as="button"

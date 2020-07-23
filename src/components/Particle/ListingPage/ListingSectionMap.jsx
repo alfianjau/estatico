@@ -97,7 +97,7 @@ function ListingSectionMap() {
     <IntricateBox
       className="listings__slider"
       title="408 Craigleith Drive 3"
-      pr="2rem"
+      pr={{ sm: 0, md: '2rem' }}
     >
       <ListingHeader />
       <Swiper {...gallerySwiperParams}>

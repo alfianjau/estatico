@@ -1,4 +1,4 @@
-import { Flex, Box, PseudoBox } from '@chakra-ui/core'
+import { Flex, Box, PseudoBox, Text, Divider } from '@chakra-ui/core'
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Hero from '../../Molecule/Hero/Hero'
@@ -34,7 +34,7 @@ function ListingPage() {
           Listing Page
         </Hero>
         <Flex direction={{ sm: 'column', md: 'row' }} width="100%">
-          <Box width={{ sm: '100%', md: 2 / 3 }} pr={4}>
+          <Box width={{ sm: '100%', md: 2 / 3 }} pr={{ sm: 0, md: 4 }}>
             <ListingSectionMap />
             <ListingSectionOverview />
             <ListingFooter />
@@ -47,7 +47,16 @@ function ListingPage() {
             pl={{ sm: 'inherit', md: 12 }}
           >
             <ListingSectionSidebar />
-            <Box width="100%" px={{ sm: 'inherit', md: 4 }} my={4}>
+            <Box>
+              <Text fontSize="xl" color="primary.500">
+                Contacts
+              </Text>
+              <Text fontSize="3xl" fontWeight="bold" my={4}>
+                J.Nolan Mills
+              </Text>
+              <Text>704.248.2133</Text>
+            </Box>
+            <Box width="100%" px={{ sm: 'inherit', md: 'initial' }} my={4}>
               <PseudoBox
                 as="button"
                 display="block"
@@ -56,7 +65,7 @@ function ListingPage() {
                 border="1px"
                 px={8}
                 py={4}
-                width={{ sm: 'auto', md: '100%' }}
+                width={{ sm: '100%', md: '100%' }}
                 rounded="2px"
                 fontSize="lg"
                 fontWeight="semibold"

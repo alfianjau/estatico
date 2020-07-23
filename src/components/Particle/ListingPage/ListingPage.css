@@ -77,3 +77,16 @@
 .listings__slider .carousel__thumbnail {
   width: 25%;
 }
+
+@media (max-width: 750px) {
+  /* Mobile custom breakpoint */
+  .listings-hero {
+    background-color: transparent;
+  }
+  .listings-hero:before {
+    content: none;
+  }
+  .listings-container .blog-feed__aside:after {
+    background-color: transparent;
+  }
+}

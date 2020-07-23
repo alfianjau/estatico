@@ -13,10 +13,10 @@ class ListingSectionOverview extends React.Component {
         title="Overview"
         className="listings-overview"
         my="5rem"
-        pr={8}
+        pr={{ sm: 0, md: 8 }}
       >
         <Flex justifyContent="Space-between" width="100%">
-          <Flex direction="column" width="100%" px={4}>
+          <Flex direction="column" width="100%" px={{ sm: 0, md: 4 }}>
             <Text mb={8}>
               7 Acres available for sale along Monroe Road in Matthews, NC
               Potential uses include multi-family/senior housing, retail, or
