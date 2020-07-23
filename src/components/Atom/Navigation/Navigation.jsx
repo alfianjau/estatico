@@ -1,5 +1,12 @@
 import React, { useState } from 'react'
-import { PseudoBox, Box, Flex, Text, IconButton } from '@chakra-ui/core'
+import {
+  PseudoBox,
+  Box,
+  Flex,
+  Text,
+  IconButton,
+  Divider,
+} from '@chakra-ui/core'
 import { FiSearch, FiTwitter, FiFacebook, FiInstagram } from 'react-icons/fi'
 import { RiMenu3Line } from 'react-icons/ri'
 import { Link } from 'gatsby'
@@ -58,6 +65,7 @@ const Header = (props) => {
         <Flex
           direction={{ sm: 'column', md: 'row' }}
           justifyContent="space-between"
+          className="navigation__items"
         >
           <MenuItems>
             <Link to="/">Company</Link>
@@ -78,7 +86,8 @@ const Header = (props) => {
             <Link to="/team/">Contacts</Link>
           </MenuItems>
         </Flex>
-        <Flex>
+        <Divider borderColor="primary.500" borderWidth="2px" />
+        <Flex className="navigation__social">
           <IconButton
             variantColor="primary"
             variant="ghost"
@@ -120,6 +129,7 @@ const Header = (props) => {
             />
           </Flex>
         </Flex>
+        <Divider borderColor="primary.500" borderWidth="2px" />
       </Box>
 
       <Box

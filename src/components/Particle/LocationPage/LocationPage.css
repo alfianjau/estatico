@@ -26,6 +26,7 @@
 }
 
 .location-container .blog-feed__aside:after {
+  background-color: white;
   bottom: auto;
 }
 

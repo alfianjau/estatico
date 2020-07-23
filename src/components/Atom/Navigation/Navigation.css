@@ -1,11 +1,25 @@
 .navigation a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .light-logo path {
-    fill: white;
+  fill: white;
 }
 
 .dark-logo path {
-    fill: initial;
+  fill: initial;
+}
+
+@media (max-width: 750px) {
+  /* Mobile custom breakpoint */
+  .navigation__items {
+    text-align: center;
+  }
+  .navigation__items p {
+    margin-right: initial;
+  }
+
+  .navigation__social {
+    justify-content: center;
+  }
 }

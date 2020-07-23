@@ -2,12 +2,11 @@ import { Flex, Box, Button, PseudoBox, Divider, Text } from '@chakra-ui/core'
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import Hero from '../../Molecule/Hero/Hero'
-import CardBox from '../../Atom/CardBox/CardBox'
-import BlogFeedWidget from '../../Molecule/BlogFeedWidget/BlogFeedWidget'
 import LocationSectionIntro from './LocationSectionIntro'
 import LocationSectionMap from './LocationSectionMap'
 import LocationSectionListing from './LocationSectionListing'
 import LocationSectionBlog from './LocationSectionBlog'
+import LocationSectionSearch from './LocationSectionSearch'
 
 import './LocationPage.css'
 
@@ -43,46 +42,12 @@ function LocationPage() {
           </Box>
           <Flex
             className="blog-feed__aside"
-            bg="gray.500"
+            bg={{ sm: 'transparent', md: 'gray.500' }}
             direction="column"
             width={{ sm: '100%', md: 1 / 3 }}
             pl={{ sm: 'inherit', md: 12 }}
           >
-            <Box width="100%">
-              <CardBox
-                isNoImage
-                tagLink="other"
-                cardDesc="Cursus in nec diam, sed tortor fames ut sit. lorem ipsum dolor"
-              >
-                test
-              </CardBox>
-            </Box>
-            <Box width="100%">
-              <CardBox
-                isNoImage
-                tagLink="other"
-                cardDesc="Cursus in nec diam, sed tortor fames ut sit. lorem ipsum dolor"
-              >
-                test
-              </CardBox>
-            </Box>
-            <Box width="100%">
-              <CardBox
-                isNoImage
-                tagLink="other"
-                cardDesc="Cursus in nec diam, sed tortor fames ut sit. lorem ipsum dolor"
-              >
-                test
-              </CardBox>
-            </Box>
-            <Box width="100%" px={{ sm: 'inherit', md: 4 }} my={4}>
-              <Button width="100%">
-                <Link alt="see more" to="/blog">
-                  See More
-                </Link>
-              </Button>
-            </Box>
-            <BlogFeedWidget />
+            <LocationSectionSearch />
           </Flex>
         </Flex>
       </Flex>
