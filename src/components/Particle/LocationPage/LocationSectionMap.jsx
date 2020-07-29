@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Flex } from '@chakra-ui/core'
 import GoogleMapReact from 'google-map-react'
 
-function LocationSectionMap() {
+function LocationSectionMap () {
   const [initial] = useState({
     map: {
       center: {
@@ -16,7 +16,7 @@ function LocationSectionMap() {
   return (
     <Flex height="30rem" width="100%" className="location-map">
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.GOOGLE_MAP_API }}
+        bootstrapURLKeys={{ key: process.env.GATSBY_GOOGLE_API_KEY }}
         defaultCenter={initial.map.center}
         defaultZoom={initial.map.zoom}
         options={{ streetViewControl: true }}

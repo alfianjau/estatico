@@ -41,7 +41,7 @@ const LocationSectionListing = () => {
   }, [filtered])
 
   return (
-    <IntricateBox title="Team Listings" className="location-listing">
+    <IntricateBox title="Commercial Listings" className="location-listing">
       <Flex direction="column">
         <ButtonGroup>
           <SortButton variantColor="primary" variant="solid">
