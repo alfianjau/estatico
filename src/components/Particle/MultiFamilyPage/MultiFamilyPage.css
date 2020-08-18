@@ -5,6 +5,15 @@
   left: 0;
 }
 
+.multi-family-container [title="Multifamily"] {
+  height: auto;
+}
+
+.multi-family-container .has-images {
+  min-height: 57em;
+  height: auto;
+}
+
 .multi-family-container .section.has-images .text-list {
   padding-left: 5rem;
   position: relative;
@@ -78,6 +87,7 @@
 }
 
 @media (max-width: 750px) {
+
   /* Mobile custom breakpoint */
   .multi-family-container .section.has-images .section__image--right {
     height: 40vh;
