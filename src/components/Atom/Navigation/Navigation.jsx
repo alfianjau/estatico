@@ -68,9 +68,6 @@ const Header = (props) => {
           className="navigation__items"
         >
           <MenuItems>
-            <Link to="/">Company</Link>
-          </MenuItems>
-          <MenuItems>
             <Link to="/about">About Us</Link>
           </MenuItems>
           <MenuItems>
@@ -83,7 +80,7 @@ const Header = (props) => {
             <Link to="/blog/">Blog</Link>
           </MenuItems>
           <MenuItems>
-            <Link to="/team/">Contacts</Link>
+            <Link to="/location/">Locations</Link>
           </MenuItems>
         </Flex>
         <Divider borderColor="primary.500" borderWidth="2px" />
